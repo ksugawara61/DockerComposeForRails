@@ -5,6 +5,12 @@
 
 ## コマンド
 
+* コンテナのビルド
+
+```
+$ docker-componse build --no-cache
+```
+
 * コンテナの起動
 
 ```
@@ -15,4 +21,10 @@ $ docker-compose up --build -d
 
 ```
 $ docker-compose stop
+```
+
+* コンテナの削除
+
+```
+$ docker-compose rm
 ```

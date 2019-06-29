@@ -1,2 +1,6 @@
 app/*
 !app/.gitkeep
+volumes/log/nginx/default/*
+!volumes/log/nginx/default/.gitkeep
+volumes/log/nginx/ruby/*
+!volumes/log/nginx/ruby/.gitkeep

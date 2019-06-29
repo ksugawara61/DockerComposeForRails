@@ -1,5 +1,20 @@
 version: '3'
 services:
+  nginx:
+    build:
+      context: .
+      dockerfile: ./containers/nginx/Dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      TZ: "Asia/Tokyo"
+    volumes:
+      - "./volumes/log/nginx/default:/var/log/nginx/default"
+      - "./volumes/log/nginx/ruby:/var/log/nginx/ruby"
+    depends_on:
+      - unicorn
+    restart: unless-stopped
   unicorn:
     build:
       context: .
