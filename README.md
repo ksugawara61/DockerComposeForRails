@@ -28,3 +28,9 @@ $ docker-compose stop
 ```
 $ docker-compose rm
 ```
+
+* コンテナの停止と削除
+
+```
+$ docker-compose down
+```

@@ -12,6 +12,7 @@ services:
     volumes:
       - "./volumes/log/nginx/default:/var/log/nginx/default"
       - "./volumes/log/nginx/ruby:/var/log/nginx/ruby"
+      - "./volumes/run/unicorn:/var/run/unicorn:ro"
     depends_on:
       - unicorn
     restart: unless-stopped
@@ -23,4 +24,7 @@ services:
       - "3000:3000"
     environment:
       TZ: "Asia/Tokyo"
+    volumes:
+      - "./volumes/log/unicorn:/var/log/unicorn"
+      - "./volumes/run/unicorn:/var/run/unicorn"
     restart: unless-stopped

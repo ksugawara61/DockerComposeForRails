@@ -4,3 +4,7 @@ volumes/log/nginx/default/*
 !volumes/log/nginx/default/.gitkeep
 volumes/log/nginx/ruby/*
 !volumes/log/nginx/ruby/.gitkeep
+volumes/log/unicorn/*
+!volumes/log/unicorn/.gitkeep
+volumes/run/unicorn/*
+!volumes/run/unicorn/.gitkeep
